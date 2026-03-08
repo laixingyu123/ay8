@@ -803,6 +803,7 @@ class AnyRouterSessionSignIn {
 								used_quota: token.used_quota,
 								remain_quota: token.remain_quota,
 								supplement_quota: 0,
+								status: token.status,
 							}));
 							console.log(`[信息] 成功获取 ${userInfo.tokens.length} 个令牌信息`);
 						}

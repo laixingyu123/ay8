@@ -139,7 +139,7 @@ class UnifiedAnyRouterChecker {
 				// 添加令牌信息
 				if (loginResult.userInfo.tokens) {
 					updateData.tokens = loginResult.userInfo.tokens;
-					const unlimitedToken = loginResult.userInfo.tokens.find((t) => t.unlimited_quota);
+					const unlimitedToken = loginResult.userInfo.tokens.find((t) => t.unlimited_quota && t.status === 1);
 					if (unlimitedToken) {
 						updateData.first_unlimited_key = unlimitedToken.key;
 					}

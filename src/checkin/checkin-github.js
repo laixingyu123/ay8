@@ -13,7 +13,7 @@ import { addAccountLoginInfo, getAccountLoginInfo } from '../api/index.js';
 import NotificationKit from '../utils/notify.js';
 import { generateTOTP } from '../utils/twofa.js';
 import path from 'path';
-import fs, { truncateSync } from 'fs';
+import fs from 'fs';
 
 class AnyRouterGitHubSignIn {
 	constructor(baseUrl = 'https://anyrouter.top') {
@@ -877,6 +877,7 @@ class AnyRouterGitHubSignIn {
 						unlimited_quota: token.unlimited_quota,
 						used_quota: token.used_quota,
 						remain_quota: token.remain_quota,
+						status: token.status,
 					}));
 					console.log(`[信息] 成功获取 ${userData.tokens.length} 个令牌信息`);
 				}

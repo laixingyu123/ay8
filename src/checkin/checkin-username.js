@@ -781,6 +781,7 @@ class AnyRouterSignIn {
 						unlimited_quota: token.unlimited_quota,
 						used_quota: token.used_quota,
 						remain_quota: token.remain_quota,
+						status: token.status,
 						supplement_quota: 0,
 					}));
 					console.log(`[信息] 成功获取 ${userData.tokens.length} 个令牌信息`);
